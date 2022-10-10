@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <header>
+        <nav>
+            <a >
+                <img src="img/logo.jpg" alt="Pedacinho do Céu" class="logo">
+            </a>
+            <ul class="nav-list">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="Loja.html">Compre aqui</a></li>
+              <li><a href="equipe.html"> Equipe </a></li>
+              <li><a href="historia.html">Nossa história</a> </li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="header-menu-user">
+                <a class="sacola-icone" href="Loja.html">
+          <img src="img/icone-sacola.svg" alt="" />
+        </a>
+      </div>
+        </nav>  
+           
+
+
+
+</head>
+<body>
+   
+    <div class="content">
+   
+        <h1>Contato</h1>
+    
+        <form id="form">
+       
+        <div>
+            <input type="text" placeholder="Digite seu nome" class="inputs required" oninput="nameValidate()">
+            <span class="span-required">O campo ficará verde quando o nome tiver 3 caracteres correto</span>
+            
+            
+        </div>
+       
+        <div>
+            <input type="email" placeholder="Digite seu melhor email" class="inputs required" oninput="emailValidate()">
+            <span class="span-required">O campo de e-mail ficará verde quando for válido</span>
+        </div>
+       
+        <div>
+            <input type="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
+            <span class="span-required">O campo ficará verde quando a senha tiver 8 caracteres</span>
+        </div>
+       
+        <div>
+            <input type="password" placeholder="Senha compativel" class="inputs required" oninput="comparePassword()">
+            <span class="span-required">O campo ficará verde quando a senha for compatível</span>
+            
+        </div>
+       
+        <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10" placeholder="Mensagem"></textarea>
+    
+        <button type="submit">Enviar</button>
+        
+
+    
+    </form>
+    </div>
+
+</body>
+
+<script>
+    const form = document.getElementById('form');
+    const campos = document.querySelectorAll('.required');
+    const spans = document.querySelectorAll('.span-required');
+    const emailRegex = /^[\w._-]+@[\w_.-]+\.[\w]{2,}/i;
+
+   form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      nameValidate();
+      emailValidate();
+      mainPasswordValidate();
+      comparePassword();
+   });
+
+   
+
+function setError(index) {
+    campos[index].style.border = '2px solid #F6311F';
+    spans[index].style.display = 'block';
+
+}
+
+function removeError(index) {
+    campos[index].style.border = '2px solid #39ff14';
+    spans[index].style.display = 'block';
+    
+}
+
+function nameValidate() {
+    if (campos[0].value.length < 3) {
+        setError(0);
+    }
+    else {
+        removeError(0)
+    }
+}
+function emailValidate() {
+    if (!emailRegex.test(campos[1].value)) {
+        setError(1);
+    }
+    else {
+        
+        removeError(1);
+    }
+}
+
+function mainPasswordValidate() {
+    if(campos[2].value.length < 8)
+{
+    setError(2);
+}
+    else
+    {
+        removeError(2);
+        comparePassword();
+    }
+}
+
+function comparePassword(){
+    if(campos[2].value == campos[3].value && campos[3].value.length >= 8)
+    {
+         removeError(3);   
+    }
+    else{
+        setError(3);
+    }
+
+
+
+
+   
+
+}
+
+
+
+</script>
+
+</html>

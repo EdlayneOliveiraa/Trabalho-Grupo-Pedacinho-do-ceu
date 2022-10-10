@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@300&display=swap');
+*{
+    margin: 0px; 
+    padding: 0px;
+ }
+ 
+ a{
+     color:black;
+     text-decoration:none ;
+     
+ }
+ a:hover{
+     opacity: 0.7;
+ }
+ .logo{
+     font-size: 24px;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     width: 160px; height: 137px;
+     padding: auto; 
+ }
+ nav{
+     display:flex;
+     justify-content:space-around;
+     align-items: center;
+     font-family: 'Alex Brush', cursive;
+     background-color: #FFC2BB;
+     height: 22vh; 
+     font-size: 25px;
+ }
+ 
+ .nav-list{
+     list-style: none;
+     display: flex;
+ }
+ .nav-list li{
+     letter-spacing: 8px;
+     margin-left: 30px;
+     margin-right: 3px;
+     cursor: pointer;
+ 
+ }
+ .nav-list li:hover{
+     opacity: 0.7;
+ }
+ body{
+   background: url(img/fundo2.jpg);
+    height: 100%;
+ }
+ h1,p{
+    font-family: 'Noto Serif Gujarati', serif;
+    padding: 10px;
+    font-size: 25px;
+    
+ }
+ .ppp {
+    text-align: center;
+    cursor: pointer;
+    text-decoration:overline underline;
+    margin-right: 100px;
+    font-family: 'Alex Brush', cursive;
+ }
+ .lista1{
+    font-family: 'Noto Serif Gujarati', serif;
+    font-size: 25px;
+    margin: 10px ;
+    list-style: none;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+ }
+ 
+
+ .galeria {
+    margin: auto;
+    width: 480px;
+    height: 270px;
+    overflow: hidden;
+    position:relative;
+    
+  }
+  
+  .foto {
+    position: absolute;
+    animation: animacao infinite 20s;
+    opacity: 0;
+  }
+  
+  @keyframes animacao {
+    25% {
+      opacity: 1;
+         transform: scale(1.1,1.1);
+    }
+   50% {
+      opacity: 0;
+         
+    }
+  }
+  
+  .foto:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .foto:nth-child(2) {
+    animation-delay: 5s;
+  }
+  
+  .foto:nth-child(3) {
+    animation-delay: 10s;
+  }
+  
+  .foto:nth-child(4) {
+    animation-delay: 15s;
+  }
+
+  .foto:nth-child(5) {
+    animation-delay: 20s;
+  }
+
+  .foto:nth-child(6) {
+    animation-delay: 25s;
+  }
+
+
+.equipe {
+    border-radius: 1cm;
+}
+ 
+ .footer.footer{
+    height: 100%;
+    background: #FFC2BB;
+    position: relative;
+}
+.fale-conosco a{
+    text-decoration: none;
+}
+.contato{
+    margin-left: 45px;
+}
+.footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+.footer h2{
+    color: black;
+    background-color: #ffc2bb;
+}
+.footer p{
+    font-size: 15px;
+    color: black;
+}
+.footer .sobre-nos{
+    margin-left: 30px;
+}
+.rede-sociais{
+    color: black;
+    align-items: center;
+}
+.rede-sociais .fa-facebook-f{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: blue;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-facebook-f:hover{
+    color: aliceblue;
+    transform: translate(-9px);
+}
+.rede-sociais .fa-instagram{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: purple;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-instagram:hover{
+    color: aliceblue;
+    transform: translate(-9px);
+}
+.rede-sociais .fa-whatsapp{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: green;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-whatsapp:hover{
+    color: aliceblue;
+    transform: translate(-9px);
+}
+.texto-copy{
+    color: brown;
+    text-align: center;
+}
+
+#home .header-menu-user {
+    display: flex;
+  }
+  .header-menu-user a {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  .header-menu-user a:hover {
+    transform: scale(1.2);
+  }
+  .header-menu-user img {
+    width: 24px;
+    height: 24px;
+  }
+  .sacola-icone {
+    position: relative;
+  }
+  

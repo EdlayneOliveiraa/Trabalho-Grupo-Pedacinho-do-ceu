@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@300&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(img/fundo2.jpg);
+    height: 100%;
+    font-family: 'Noto Serif Gujarati', serif;
+    
+}
+.nav-list{
+    font-family: 'Alex Brush', cursive;
+}
+#produtos{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#carrinho{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: block;
+}
+
+.produto-single{
+    width: 32%;
+    margin-right: 1%;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.produto-single img{
+    max-width: 100%;
+    width: 400px;
+    height: 250px;
+}
+
+.produto-single p{
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.produto-single a{
+    text-decoration: none;
+    color: #e55175;
+    background-color: #ffc2bb;
+    text-align: center;
+    display: block;
+    padding: 4px 0;
+    font-size: 18px;
+}
+
+h2{
+    background-color: #e55175;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.info-single-checkout{
+    border-bottom: 2px dotted;
+    padding: 10px 0;
+    font-weight: bold;
+    color: black;
+}
+
+#prodID{
+    color: #e55175;
+}
+
+@media screen and (max-width: 768px){
+    .produto-single{
+        width: 100%;
+        margin-right: 0;
+    }
+}
